@@ -1,0 +1,234 @@
+/*
+ * 
+ * 
+ */
+
+:root {
+  font-size: 16px; 
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  position: relative;
+  
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding-top: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  outline: none;
+  border: 0;
+  padding: 16px;
+  padding: 1rem;
+  background-color: white;
+  
+  font-size: 20px;
+  font-size: 1.25rem;
+  
+  line-height: 1;
+  color: white;
+
+}
+
+button:hover {
+  color: yellow;
+}
+
+button.block {
+  width: 100%;
+}
+
+button.transparent {
+  background-color: transparent;
+}
+
+button.no-padding {
+  padding: 0;
+}
+
+button.long-text {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.react-calculator {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  
+  box-shadow: 0 19px 38px rgba(19, 19, 19, .24), 0 15px 12px rgba(19, 19, 19, .12);
+}
+
+body::-webkit-scrollbar, .field-result::-webkit-scrollbar, .paper-tape::-webkit-scrollbar {
+  width: 8px;
+  width: .5rem;
+}
+
+body::-webkit-scrollbar:horizontal, .field-result::-webkit-scrollbar:horizontal, .paper-tape::-webkit-scrollbar:horizontal {
+  height: 8px;
+  height: .5rem;
+}
+
+body::-webkit-scrollbar-track, body::-webkit-scrollbar:horizontal,
+  .field-result::-webkit-scrollbar-track,
+  .field-result::-webkit-scrollbar:horizontal,
+  .paper-tape::-webkit-scrollbar-track,
+  .paper-tape::-webkit-scrollbar:horizontal {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb, body::-webkit-scrollbar:horizontal,
+  .field-result::-webkit-scrollbar-thumb,
+  .field-result::-webkit-scrollbar:horizontal,
+  .paper-tape::-webkit-scrollbar-thumb,
+  .paper-tape::-webkit-scrollbar:horizontal {
+  background-color: green;
+}
+
+s
+  body:hover::-webkit-scrollbar-thumb,
+    s
+  body:hover::-webkit-scrollbar:horizontal,
+    s
+  .field-result:hover::-webkit-scrollbar-thumb,
+    s
+  .field-result:hover::-webkit-scrollbar:horizontal,
+    s
+  .paper-tape:hover::-webkit-scrollbar-thumb,
+    s
+  .paper-tape:hover::-webkit-scrollbar:horizontal {
+  background-color: red;
+}
+
+.field-result {
+  position: relative;
+  width: 320px;
+  height: 96px;
+  z-index: 10;
+  
+  outline: none;
+  box-shadow: 0 4px 2px -2px rgba(19, 19, 19, .64);
+  padding: 8px;
+  padding: .5rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  border-color: red;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px 16px 0px 0px;
+  background-color: rgba(19, 19, 19, .64);
+
+  font-size: 44px;
+  font-size: 3rem;
+  
+  line-height: 2;
+  
+  color: red;
+  
+  text-align: right;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+.paper-tape {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 16;
+  
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  
+  background-color: rgba(19, 19, 19, .64);
+  color: pink;
+  
+}
+
+.paper-tape .toggle-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 2px 5px;
+}
+
+.paper-tape .toggle-close .title {
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.paper-tape.visible {
+  height: calc(100% - 80px);
+  padding: 10px;
+  overflow-y: auto;
+  
+}
+
+.keys--functions, .keys-operators {
+  background-color: red;
+}
+
+.keys--functions button, .keys-operators button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  vertical-align: top;
+  text-transform: uppercase;
+ 
+  font-variant: small-caps;
+  color: gray;
+  
+  border-color: black;
+  border-style: solid;
+  border-radius: 16px;
+}
+
+.keys--functions button:hover, .keys-operators button:hover {
+  color: orange;
+}
+
+.keys--numbers {
+  width: 240px;
+  float: left;
+  background-color: gray;
+}
+
+.keys--numbers button {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  float: left;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1px;
+  background-color: gray;
+ 
+}
+
+.keys--numbers button:last-child 
+{
+  width: 100%;
+}
+
+.keys--functions {
+  clear: left;
+  float: left;
+  width: 240px;
+}
+
